@@ -1,0 +1,14 @@
+{
+  "runtime": {
+    "reference": "ghcr.io/openhands/agent-server@sha256:8496d13f117827165af5a9c5c2b8ec5a1e52074aaff49a196ce9b000262d6b0c",
+    "tag": "1.60.1-python",
+    "platform": "linux/amd64",
+    "python_version": null
+  },
+  "rust": {
+    "reference": "registry-1.docker.io/library/rust@sha256:fc4cf6c302df3a3cb211027605fd61447cac29d873692041bd21d22c55b5b459",
+    "tag": "1.82.0-bookworm",
+    "platform": "linux/amd64",
+    "python_version": null
+  }
+}

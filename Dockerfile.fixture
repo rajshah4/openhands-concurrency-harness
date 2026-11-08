@@ -1,0 +1,16 @@
+# Both build arguments must be the immutable linux/amd64 references in images.lock.json.
+ARG RUST_IMAGE
+ARG RUNTIME_IMAGE
+FROM ${RUST_IMAGE} AS rust
+FROM ${RUNTIME_IMAGE}
+USER root
+COPY --from=rust /usr/local/cargo /usr/local/cargo
+COPY --from=rust /usr/local/rustup /usr/local/rustup
+ENV CARGO_HOME=/usr/local/cargo RUSTUP_HOME=/usr/local/rustup
+ENV PATH=/usr/local/cargo/bin:${PATH}
+RUN apt-get update && apt-get install --no-install-recommends -y git build-essential pkg-config libpcre2-dev && rm -rf /var/lib/apt/lists/*
+COPY workloads.json /tmp/load-kit/workloads.json
+COPY fixtures /tmp/load-kit/fixtures
+RUN python /tmp/load-kit/fixtures/setup-runtime.py && chown -R 10001:10001 /opt/load-fixtures /usr/local/cargo /usr/local/rustup
+USER openhands
+# Retain the inherited Agent Server entrypoint. This is a test image, not a stock runtime.

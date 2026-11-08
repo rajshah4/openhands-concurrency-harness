@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "python": "3.13",
+  "rust_toolchain": "1.82.0",
+  "workloads": {
+    "interactive": {
+      "repository": "https://github.com/pallets/click.git",
+      "ref": "8.1.8",
+      "commit": "934813e4d421071a1b3db3973c02fe2721359a6e",
+      "license": "BSD-3-Clause",
+      "test_lock_sha256": "5bac9588b5dda6960373aa11fe3c4ca9da734edf178169ceef18579702ee5c2f"
+    },
+    "build": {
+      "repository": "https://github.com/BurntSushi/ripgrep.git",
+      "ref": "14.1.1",
+      "commit": "4649aa9700619f94cf9c66876e9549d83420e16c",
+      "license": "MIT OR Unlicense"
+    },
+    "automation": {
+      "repository": "https://github.com/pallets/flask.git",
+      "ref": "3.1.0",
+      "commit": "ab8149664182b662453a563161aa89013c806dc9",
+      "license": "BSD-3-Clause",
+      "test_lock_sha256": "a62e8f75b5f0d986c2cbb9fa52f28b4ffe4030992c596f5d2752682d47142c7a"
+    }
+  }
+}

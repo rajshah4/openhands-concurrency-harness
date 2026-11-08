@@ -1,0 +1,27 @@
+{
+  "target": {
+    "origin": "https://app.example.com",
+    "org_id": "11111111-2222-4333-8444-55555555555a",
+    "user_id": "11111111-2222-4333-8444-55555555555b",
+    "sandbox_origins": [
+      "https://app.example.com",
+      "https://*.runtimes.example.com"
+    ],
+    "legacy_personal_sandbox_schema": false
+  },
+  "api_key_env": "OPENHANDS_API_KEY",
+  "model_profile": "YOUR_EXISTING_TEST_PROFILE",
+  "levels": [
+    1,
+    4,
+    8,
+    16,
+    32
+  ],
+  "maximum_control_requests_per_second": 0.5,
+  "prepare_workers": 4,
+  "wave_timeout_seconds": 1200,
+  "max_run_seconds": 14400,
+  "health_failure_limit": 3,
+  "allowed_unsuccessful": 0
+}

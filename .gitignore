@@ -1,0 +1,11 @@
+runs/
+.private/
+config.local.json
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
